@@ -3,3 +3,4 @@ libs/
 secret.txt
 token.txt
 src/token.hpp
+*.mp3
