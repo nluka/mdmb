@@ -1,7 +1,9 @@
 CXX = g++
-# CXXFLAGS = -Werror -Wall -Wextra -Wconversion -Wpedantic
-CXXFLAGS = -Wall -Wextra -Wconversion -Wpedantic
-CXXLINKS = -ldpp -lmpg123
+CXXFLAGS = -std=c++20 -Werror -Wall -Wextra -Wconversion -Wpedantic
+CXXLINKS = -ldpp -loggz -lmpg123 -lpthread -lboost_system
 
 default:
-	$(CXX) $(CXXFLAGS) -o mdmb src/main.cpp $(CXXLINKS)
+	$(CXX) $(CXXFLAGS) -g -o mdmb src/main.cpp $(CXXLINKS)
+
+mp3_example:
+	$(CXX) $(CXXFLAGS) -g -o mdmb src/mp3_example.cpp $(CXXLINKS)

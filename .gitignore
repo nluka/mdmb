@@ -3,4 +3,5 @@ libs/
 secret.txt
 token.txt
 src/token.hpp
-*.mp3
+data/
+.vscode/settings.json
